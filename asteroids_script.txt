@@ -1,0 +1,14 @@
+clear
+reset
+
+# Links 3 .ASM files into 1 .OBJ
+as asteroids user lc4libc asteroids
+
+# loads the linked .OBJ
+ld asteroids
+
+# assemble, load OS code
+as os os
+ld os
+
+break set END
